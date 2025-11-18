@@ -1,0 +1,94 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Electrónica"
+        },
+        {
+            "id": 2,
+            "name": "Ropa"
+        },
+        {
+            "id": 3,
+            "name": "Hogar"
+        },
+        {
+            "id": 4,
+            "name": "Deportes"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "name": "Laptop HP",
+            "description": "Laptop potente para trabajo",
+            "price": 899.99,
+            "imageUrl": "https://via.placeholder.com/300x200?text=Laptop",
+            "categoryId": 1,
+            "stock": 15
+        },
+        {
+            "id": 2,
+            "name": "Mouse Inalámbrico",
+            "description": "Mouse ergonómico",
+            "price": 25.50,
+            "imageUrl": "https://via.placeholder.com/300x200?text=Mouse",
+            "categoryId": 1,
+            "stock": 50
+        },
+        {
+            "id": 3,
+            "name": "Camiseta Deportiva",
+            "description": "Camiseta de algodón",
+            "price": 19.99,
+            "imageUrl": "https://via.placeholder.com/300x200?text=Camiseta",
+            "categoryId": 2,
+            "stock": 30
+        },
+        {
+            "id": 4,
+            "name": "Zapatillas Running",
+            "description": "Zapatillas para correr",
+            "price": 79.99,
+            "imageUrl": "https://via.placeholder.com/300x200?text=Zapatillas",
+            "categoryId": 4,
+            "stock": 20
+        },
+        {
+            "id": 5,
+            "name": "Audífonos Bluetooth",
+            "description": "Audífonos inalámbricos",
+            "price": 45.00,
+            "imageUrl": "https://via.placeholder.com/300x200?text=Audifonos",
+            "categoryId": 1,
+            "stock": 40
+        },
+        {
+            "id": 6,
+            "name": "Jeans Clásicos",
+            "description": "Jeans de mezclilla",
+            "price": 49.99,
+            "imageUrl": "https://via.placeholder.com/300x200?text=Jeans",
+            "categoryId": 2,
+            "stock": 25
+        },
+        {
+            "id": 7,
+            "name": "Lámpara LED",
+            "description": "Lámpara de escritorio",
+            "price": 29.99,
+            "imageUrl": "https://via.placeholder.com/300x200?text=Lampara",
+            "categoryId": 3,
+            "stock": 35
+        },
+        {
+            "id": 8,
+            "name": "Balón de Fútbol",
+            "description": "Balón profesional",
+            "price": 35.00,
+            "imageUrl": "https://via.placeholder.com/300x200?text=Balon",
+            "categoryId": 4,
+            "stock": 18
+        }
+    ]
+}
