@@ -14,5 +14,21 @@ export const api = {
         const response = await fetch(`${API_URL}/categories`);
         if (!response.ok) throw new Error('Error al obtener las categorías');
         return response.json();
-    }
+    },
+
+    // POST - Crear nuevo producto
+    async createProduct(product) {
+        const response = await fetch(`${API_URL}/products`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(product)
+        })
+        if (!response.ok) {
+            const errorData = await response.json()
+            throw new Error(errorData.error || 'Error al crear producto')
+        }
+        return response.json()
+    },
 }

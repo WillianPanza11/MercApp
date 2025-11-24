@@ -37,11 +37,28 @@ export function useProducts() {
         }
     };
 
+    // Crear producto
+  const createProduct = async (productData) => {
+    loading.value = true
+    error.value = null
+    try {
+      const newProduct = await api.createProduct(productData)
+      products.value.push(newProduct)
+      return newProduct
+    } catch (err) {
+      error.value = err.message
+      throw err
+    } finally {
+      loading.value = false
+    }
+  }
+
     return {
         products,
         categories,
         loading,
         error,
+        createProduct, 
         fetchProducts,
         fetchCategories
     };

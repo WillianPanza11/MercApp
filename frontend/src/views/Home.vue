@@ -67,10 +67,19 @@
 import { ref, computed, onMounted } from "vue";
 import { useProducts } from "../composables/useProducts";
 import ProductCard from "../components/ProductCard.vue";
+import { useCart } from "../composables/useCart";
 
 // Composable, esto se obtiene de frontend/src/composables/useProducts.js
 const { products, categories, loading, error, fetchProducts, fetchCategories } =
   useProducts();
+
+const { addToCart } = useCart()
+
+// Manejar evento de añadir al carrito (ACTUALIZADO)
+const handleAddToCart = (product) => {
+  addToCart(product)
+  alert(`✅ ${product.name} añadido al carrito`)
+}
 
 // Estados reactivos para filtros
 const searchQuery = ref("");
@@ -116,12 +125,14 @@ const clearFilters = () => {
   selectedCategory.value = "";
 };
 
+/*
+
 // Manejar evento de añadir al carrito (Tarea 7)
 const handleAddToCart = (product) => {
-  // Obtener carrito actual del localStorage
+  Obtener carrito actual del localStorage
   const cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
-  // Buscar si el producto ya está en el carrito
+  Buscar si el producto ya está en el carrito
   const existingItem = cart.find((item) => item.id === product.id);
 
   if (existingItem) {
@@ -130,12 +141,13 @@ const handleAddToCart = (product) => {
     cart.push({ ...product, quantity: 1 });
   }
 
-  // Guardar en localStorage
+  Guardar en localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  // Feedback visual
+  Feedback visual
   alert(`✅ ${product.name} añadido al carrito`);
 };
+*/
 </script>
 
 <style scoped>

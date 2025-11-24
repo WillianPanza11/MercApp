@@ -6,6 +6,7 @@ import Home from '../views/Home.vue';
 //Lazy loading de las vistas
 const ProductDetail = () => import('../views/ProductDetail.vue')
 const ProductForm = () => import('../views/ProductForm.vue') 
+const Cart = () => import('../views/Cart.vue')
 
 const routes = [
     {
@@ -17,6 +18,11 @@ const routes = [
         path: '/product/new',
         name: 'ProductNew',
         component: ProductForm
+    },
+    {
+        path: '/cart',
+        name: 'Cart',
+        component: Cart
     }
 ];
 
