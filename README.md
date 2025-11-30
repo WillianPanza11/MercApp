@@ -1,4 +1,6 @@
 # MercApp
+LINK GITHUB: https://github.com/WillianPanza11/MercApp.git
+
 
 # PARA EJECUTAR EL PROYECTO
 1. Ingresar a la carpeta: mercAppUnidad3\backend
